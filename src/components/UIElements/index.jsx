@@ -11,7 +11,7 @@ export function Wrapper({ children }) {
 
 export function BackButton({ title, to }) {
   return (
-    <Link to={to} className={styles.btn}>
+    <Link to={to} className={styles.backBtn}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -41,4 +41,12 @@ export function PageTitle({ title, highlight }) {
 
 export function SubTitle({ text }) {
   return <p className={styles.subtitle}>{text}</p>;
+}
+
+export function NextButton({ title, to }) {
+  return (
+    <Link className={styles.nextBtn} to={to}>
+      {title}
+    </Link>
+  );
 }

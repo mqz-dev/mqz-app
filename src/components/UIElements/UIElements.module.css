@@ -1,4 +1,4 @@
-.btn {
+.backBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -78,4 +78,38 @@
   line-height: 1.6;
   border-inline-start: 3px solid var(--clr-primary);
   letter-spacing: 0.1em;
+}
+
+.nextBtn {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border: 3px solid var(--clr-primary);
+  box-shadow: 5px 5px 0 0 var(--clr-accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 0 var(--clr-accent);
+  }
+
+  &:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0 var(--clr-accent);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 4px;
+  }
 }
