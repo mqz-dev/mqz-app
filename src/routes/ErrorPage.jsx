@@ -7,7 +7,10 @@ export default function ErrorPage() {
         title="404 - Page Not Found | MQZ"
         description="The page you're looking for doesn't exist."
       />
-      <h1>ErrorPage</h1>
+      <main className="pg-0910">
+        <div className="pg-ruler-0910"></div>
+        <h1>ErrorPage</h1>
+      </main>
     </>
   );
 }

@@ -7,7 +7,10 @@ export default function ThemesPage() {
         title="Select Theme | MQZ App"
         description="Scroll through our themes and find the one that fits your vibe."
       />
-      <h1>Themes Page</h1>
+      <main className="pg-0910">
+        <div className="pg-ruler-0910"></div>
+        <h1>Themes Page</h1>
+      </main>
     </>
   );
 }
