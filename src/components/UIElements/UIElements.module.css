@@ -51,6 +51,7 @@
 .ruler {
   block-size: 1rem;
   inline-size: 100%;
+  background-color: var(--clr-white);
   background-image: linear-gradient(
     to right,
     var(--clr-secondary) 0 1px,
@@ -72,7 +73,7 @@
 
 .subtitle {
   color: var(--clr-secondary);
-  font-size: 1rem;
+  font-size: 1.125rem;
   padding-inline-start: 1rem;
   margin-block-end: 3rem;
   line-height: 1.6;

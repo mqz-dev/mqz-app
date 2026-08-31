@@ -31,16 +31,12 @@ export function BackButton({ title, to }) {
   );
 }
 
-export function PageTitle({ title, highlight }) {
-  return (
-    <h1 className={styles.title}>
-      {title} <span>{highlight}</span>
-    </h1>
-  );
+export function PageTitle({ children }) {
+  return <h1 className={styles.title}>{children}</h1>;
 }
 
-export function SubTitle({ text }) {
-  return <p className={styles.subtitle}>{text}</p>;
+export function SubTitle({ children }) {
+  return <p className={styles.subtitle}>{children}</p>;
 }
 
 export function NextButton({ title, to }) {

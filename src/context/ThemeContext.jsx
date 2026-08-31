@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 
 const STORAGE_KEY = "mqz-theme";
 
@@ -34,4 +34,8 @@ export function ThemeProvider({ children }) {
       {children}
     </ThemeContext.Provider>
   );
+}
+
+export function useTheme() {
+  return useContext(ThemeContext);
 }

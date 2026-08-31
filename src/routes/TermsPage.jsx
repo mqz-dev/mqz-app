@@ -19,14 +19,16 @@ export default function TermsPage() {
         <Ruler />
         <Wrapper>
           <BackButton title="Back to Home" to="/" />
-          <PageTitle title="Terms of" highlight="Service" />
+          <PageTitle>
+            Terms of <span>Service</span>
+          </PageTitle>
           <p className={styles.stamp}>Last Updated: 25 July 2026</p>
-          <SubTitle
-            text="These Terms of Service govern your use of MQZ at https://mqz.app. By
+          <SubTitle>
+            These Terms of Service govern your use of MQZ at https://mqz.app. By
             accessing or using the website and its services, you agree to these
             Terms. If you do not agree with these Terms, please do not use the
-            website."
-          />
+            website.
+          </SubTitle>
 
           <section className={styles.termSection}>
             <h2>1. What the Service Does</h2>
