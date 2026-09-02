@@ -1,0 +1,107 @@
+.sectionContainer {
+  background-color: var(--clr-white);
+  color: var(--clr-secondary);
+  padding-inline: 1.25rem;
+  padding-block: 1.75rem;
+  border: 3px solid var(--clr-primary);
+  margin-block: 2.5rem;
+  box-shadow: 6px 6px 0 0 var(--clr-primary);
+}
+
+.sectionHeader {
+  border-block-end: 1px solid var(--clr-secondary);
+  padding-block-end: 1.25rem;
+  margin-block-end: 1.25rem;
+}
+
+.sectionTitle {
+  color: var(--clr-primary);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-block: 0 0.6rem;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: var(--clr-secondary);
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.inputsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @media (max-width: 48rem) {
+    grid-template-columns: 1fr;
+  }
+
+  :last-child:has(textarea) {
+    grid-column: 1/-1;
+  }
+}
+
+.card {
+  position: relative;
+  padding-inline: 1.25rem;
+  padding-block: 2.25rem;
+  margin-block-end: 1.25rem;
+  border: 2px solid var(--clr-primary);
+}
+
+.removeBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  font-size: 1rem;
+  border: 1px solid var(--clr-primary);
+  padding: 0;
+  line-height: 1;
+  font-weight: 900;
+  padding-inline: 0.5rem;
+  padding-block: 0.3rem;
+  cursor: pointer;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease;
+
+  &:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    border-color: var(--clr-accent);
+  }
+}
+
+.addBtn {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  border: 2px dashed var(--clr-primary);
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  cursor: pointer;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease,
+    border-style 0.1s ease;
+
+  &:hover {
+    border-style: solid;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+  }
+}
+
+.mb:has(input) {
+  margin-bottom: 1.25rem;
+}

@@ -35,6 +35,7 @@ export default function ThemesPage() {
             that feels like you. When you're ready, click{" "}
             <strong>Next Step - Fill the Details</strong> below.
           </SubTitle>
+
           <div className={styles.grid}>
             {themes.map((theme) => {
               const isSelected = theme.path === selectedTheme;

@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, useContext } from "react";
 
 const STORAGE_KEY = "mqz-app-form-data";
 
@@ -48,4 +48,8 @@ export default function FormProvider({ children }) {
       {children}
     </FormContext.Provider>
   );
+}
+
+export function useFormData() {
+  return useContext(FormContext);
 }

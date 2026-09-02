@@ -1,0 +1,84 @@
+.container {
+  --clr-white: #fff;
+  --clr-primary: #0d0d0d;
+  --clr-secondary: #4a4a46;
+  --clr-accent: #e8380d;
+
+  --ff-0910:
+    "Archivo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  font-family: var(--ff-0910);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nextBtn {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1.75rem;
+  border: 3px solid var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 5px 5px 0 0 var(--clr-accent);
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 0 var(--clr-accent);
+  }
+  &:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 0 var(--clr-accent);
+  }
+  &:focus-visible {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+  }
+}
+
+.formFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-block-start: 2rem;
+  border-block-start: 1px solid var(--clr-primary);
+  padding-block-start: 2rem;
+}
+
+.resetBtn {
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+  font-family: inherit;
+  text-transform: uppercase;
+  padding-inline: 0.8rem;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease,
+    border-color 0.1s ease;
+
+  &:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    border-color: var(--clr-accent);
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--clr-accent);
+    outline-offset: 2px;
+  }
+}
