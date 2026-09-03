@@ -29,14 +29,16 @@ export default function Preview({ onClose }) {
           ActiveTemplate={ActiveTemplate}
         />
         <section className={styles.previewContainer}>
-          <h1>Hello there </h1> <h1>Hello there </h1>
+          <h1>Hello there 1</h1> <h1>Hello there </h1>
           <h1>Hello there </h1>
           <h1>Hello there </h1>
           <h1>Hello there last</h1>
         </section>
       </main>
 
-      {showPostDownloadModal && <PostDownloadModal />}
+      {showPostDownloadModal && (
+        <PostDownloadModal onClose={() => setShowPostDownloadModal(false)} />
+      )}
     </>
   );
 }

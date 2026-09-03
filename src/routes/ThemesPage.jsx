@@ -1,65 +1,36 @@
+import { lazy, Suspense } from "react";
 import Seo from "../components/Seo";
-import {
-  BackButton,
-  PageTitle,
-  Ruler,
-  SubTitle,
-  Wrapper,
-} from "../components/UIElements";
-import styles from "../styles/ThemesPage.module.css";
-import { useNavigate } from "react-router";
-import { useTheme } from "../context/ThemeContext";
-import { themes } from "../utils/getThemes";
-import Card from "../components/Card";
+import BackButton from "../components/BackButton";
+import Loader from "../components/Loader";
+
+const ThemesGrid = lazy(
+  () => import("../components/LazyComponents/ThemesWrapper"),
+);
 
 export default function ThemesPage() {
-  const { selectedTheme, setSelectedTheme } = useTheme();
-
-  let navigate = useNavigate();
-
   return (
     <>
       <Seo
         title="Select Theme | MQZ App"
         description="Scroll through our themes and find the one that fits your vibe."
       />
-      <main className={styles.container}>
-        <Ruler />
-        <Wrapper>
+      <main className="pg-0910">
+        <div className="pg-ruler-0910"></div>
+        <section className="pg-wrapper-0910">
           <BackButton title="Back to Home" to="/" />
-          <PageTitle>
+          <h1 className="pg-title-0910">
             Pick a <span>theme</span> for your webpage
-          </PageTitle>
-          <SubTitle>
+          </h1>
+          <p className="pg-subtitle-0910">
             Every theme uses the same details. Scroll through and find the one
             that feels like you. When you're ready, click{" "}
             <strong>Next Step - Fill the Details</strong> below.
-          </SubTitle>
+          </p>
 
-          <div className={styles.grid}>
-            {themes.map((theme) => {
-              const isSelected = theme.path === selectedTheme;
-              return (
-                <Card
-                  key={theme.path}
-                  theme={theme}
-                  isSelected={isSelected}
-                  setSelectedTheme={setSelectedTheme}
-                />
-              );
-            })}
-          </div>
-          <div className={styles.footer}>
-            <button
-              type="button"
-              className={styles.btn}
-              disabled={!selectedTheme}
-              onClick={() => navigate("/build")}
-            >
-              Next Step - Fill the Details
-            </button>
-          </div>
-        </Wrapper>
+          <Suspense fallback={<Loader />}>
+            <ThemesGrid />
+          </Suspense>
+        </section>
       </main>
     </>
   );

@@ -1,10 +1,4 @@
-import {
-  BackButton,
-  PageTitle,
-  Ruler,
-  SubTitle,
-  Wrapper,
-} from "../components/UIElements";
+import BackButton from "../components/BackButton";
 import Seo from "../components/Seo";
 import styles from "../styles/TermsPage.module.css";
 
@@ -15,20 +9,20 @@ export default function TermsPage() {
         title="Terms of Service | MQZ"
         description="Read the MQZ Terms of Service and Acceptable Use Policy, including user responsibilities, prohibited activities, platform guidelines, requirements and conditions of use."
       />
-      <main className={styles.container}>
-        <Ruler />
-        <Wrapper>
+      <main className="pg-0910">
+        <div className="pg-ruler-0910"></div>
+        <section className="pg-wrapper-0910">
           <BackButton title="Back to Home" to="/" />
-          <PageTitle>
+          <h1 className="pg-title-0910">
             Terms of <span>Service</span>
-          </PageTitle>
+          </h1>
           <p className={styles.stamp}>Last Updated: 25 July 2026</p>
-          <SubTitle>
+          <p className="pg-subtitle-0910">
             These Terms of Service govern your use of MQZ at https://mqz.app. By
             accessing or using the website and its services, you agree to these
             Terms. If you do not agree with these Terms, please do not use the
             website.
-          </SubTitle>
+          </p>
 
           <section className={styles.termSection}>
             <h2>1. What the Service Does</h2>
@@ -119,7 +113,7 @@ export default function TermsPage() {
               made.
             </p>
           </section>
-        </Wrapper>
+        </section>
       </main>
     </>
   );

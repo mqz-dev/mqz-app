@@ -1,7 +1,6 @@
 import Seo from "../components/Seo";
 import { Link } from "react-router";
 import styles from "../styles/HomePage.module.css";
-import { NextButton } from "../components/UIElements";
 
 export default function HomePage() {
   return (
@@ -18,8 +17,9 @@ export default function HomePage() {
           Choose a theme, fill your details, and download the code. We'll also
           show you how to put it online for free.
         </p>
-
-        <NextButton title="Let's Start Building" to="/themes" />
+        <Link className="pg-button-0910" to="/themes">
+          Let's Start Building
+        </Link>
 
         <p className={styles.footnote}>
           No Credit Card or Sign Up required. By continuing, you agree to our{" "}
