@@ -14,6 +14,10 @@ body {
   background-color: var(--clr-white);
   color: var(--clr-primary);
   font-family: var(--ff-0910);
+
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  font-family: var(--ff-0910);
 }
 
 .pg-ruler-0910 {
