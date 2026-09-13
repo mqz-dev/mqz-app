@@ -1,11 +1,15 @@
-import styles from "./Form.module.css";
+import { useState } from "react";
+import styles from "./FormSection.module.css";
 import { INITIALFORMDATA, useFormData } from "../../context/FormContext";
 import ResetModal from "../../components/Modals/ResetModal";
-import Accordion from "../Accordion";
-import FormSection from "../FormSection";
-import BackButton from "../BackButton";
-import { useState } from "react";
-import { FieldWithClose, InputField, TextAreaField } from "../FormInputs";
+import Accordion from "../../components/Accordion";
+import FormSection from "../../components/FormSection";
+import BackButton from "../../components/BackButton";
+import {
+  FieldWithClose,
+  InputField,
+  TextAreaField,
+} from "../../components/FormInputs";
 
 export default function EntireForm({ onFormSubmit }) {
   const { data, setData } = useFormData();

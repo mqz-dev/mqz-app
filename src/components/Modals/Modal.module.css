@@ -136,11 +136,11 @@
 }
 
 .instructions {
-  background: var(--clr-terniary);
-  border: 2px solid var(--clr-primary);
-  box-shadow: 4px 4px 0 0 var(--clr-primary);
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+  /* background: var(--clr-terniary); */
+  /* border: 2px solid var(--clr-primary); */
+  /* box-shadow: 4px 4px 0 0 var(--clr-primary); */
+  /* padding: 1.25rem; */
+  /* margin-bottom: 1.5rem; */
 
   h3 {
     margin-block: 0 0.9rem;
@@ -188,10 +188,15 @@
   }
 }
 
+.downloadModalFooter {
+  margin-inline: 1rem;
+}
+
 .gotItBtn {
   display: block;
   background: var(--clr-primary);
-  inline-size: 80%;
+  inline-size: 100%;
+  box-sizing: border-box;
   margin-block: 0.5 2rem;
   margin-inline: auto;
   text-align: center;

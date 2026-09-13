@@ -3,7 +3,7 @@ import Seo from "../components/Seo";
 import Preview from "../components/Preview";
 import Loader from "../components/Loader";
 
-const FormPage = lazy(() => import("../components/LazyComponents/EntireForm"));
+const FormPage = lazy(() => import("../lazySections/FormSection"));
 
 export default function BuildPage() {
   const [showPreview, setShowPreview] = useState(false);
